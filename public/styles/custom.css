@@ -1,0 +1,84 @@
+.btn{
+
+	background: transparent;
+	/*color: #F2F2F2; */
+
+	/* CSS Transition */
+	-webkit-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-moz-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-ms-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-o-transition: background .2s ease-in-out, border .2s ease-in-out;
+	transition: background .2s ease-in-out, border .2s ease-in-out;
+
+  -webkit-border-radius: 0;
+	-moz-border-radius:    0;
+	border-radius:         0;
+
+}
+.btn-default:hover,
+.btn-default:focus {
+  background-color: #404040;
+  border: 1px solid white;
+  color: white;
+}
+
+#logo {
+  height: 200%;
+  margin-top: -.5em;
+}
+
+@font-face {
+    font-family: 'Cabana'; /*a name to be used later*/
+    src: url('http://ff.static.1001fonts.net/c/a/cabana.regular.otf'); /*URL to font*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Cabana';
+  font-weight: 1000;
+}
+h1 {
+  font-size: 400%;
+}
+h2 {
+  font-size: 350%;
+}
+h3 {
+  font-size: 300%;
+}
+h4 {
+  font-size: 250%;
+}
+h5 {
+  font-size: 200%;
+}
+h6 {
+  font-size: 150%;
+}
+
+.navbar-custom {
+	background: transparent;
+	border-bottom: transparent;
+}
+
+.intro-header {
+	margin-bottom: 0px;
+}
+
+.intro-header .site-heading,
+.intro-header .post-heading,
+.intro-header .page-heading {
+  padding: 100px 0 0px;
+  color: black;
+}
+@media only screen and (min-width: 768px) {
+  .intro-header .site-heading,
+  .intro-header .post-heading,
+  .intro-header .page-heading {
+    padding: 150px 0;
+  }
+}

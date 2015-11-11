@@ -1,23 +1,78 @@
 extends ../layouts/default
 
+append config
+	- var pageSub = ''
+
+
 block content
-	.container: .jumbotron
-		img(src='/images/logo.svg', width='160')
-		h1 Welcome
-		p This is your new <a href='http://keystonejs.com', target='_blank'>KeystoneJS</a> website.
-		p It includes the latest versions of
-			| <a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
-			| and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
-		p Visit the <a href='http://keystonejs.com/guide' target='_blank'>Getting Started</a> guide to learn how to customise it.
-		hr
-		if user && user.canAccessKeystone
-			p
-				a(href='/keystone/signin').btn.btn-lg.btn-primary Open the Admin UI
-		else
-			p We have created a default Admin user for you with the email <strong>user@keystonejs.com</strong> and the password <strong>admin</strong>.
-			p
-				a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
-				|  to use the Admin UI.
-		hr
-		p Remember to <a href='https://github.com/JedWatson/keystone' target='_blank'>Star KeystoneJS on GitHub</a> and
-			| <a href='https://twitter.com/keystonejs' target='_blank'>follow @keystonejs</a> on twitter for updates.
+	.container
+
+		h3.text-center Life's short. Let's make the most of it together.
+		p
+			|	I'm J.P., and I quit my job in finance to travel, teach English, and work on my
+			|	startup idea. This blog talks about things that I'm learning along the
+			|	way. If you want to learn about language, travel, teaching, personal
+			|	finance, and business building, click the link below. If you
+			|	like what you see and want to subscribe to be alerted whenever there's
+			|	a new post, hit subscribe. New post every Tuesday. Hope you like the
+			|	blog!
+		.text-center
+			a(href="blog").btn.btn-default Read Blog
+			button(type="button", data-toggle="modal", data-target="#subsc-modal").btn.btn-default Subscribe
+		
+		//- modal coding
+		//- .modal.fade#subsc-modal
+		//- 	.modal-dialog
+		//- 		.modal-header
+		//- 			button.close(type="button", data-dismiss="modal")
+		//- 				span(aria-hidden="true")
+		//- 				span.sr-only
+		//- 					| Close
+		//- 		.modal-body
+		//- 			p Test
+		//- 		.modal-footer
+		//- 			input(type="text", value="Enter email address")
+		//- 			button.btn.btn-success(type="button", data-dismiss="modal")
+		//- 				| Subscribe
+		//- 				
+		#subsc-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+			.modal-dialog
+				.modal-content#mc_embed_signup
+					form#mc-embedded-subscribe-form.validate(action='//conquistar.us12.list-manage.com/subscribe/post?u=584f8d8c2c7dcb55d63212970&id=bb4694ca0d', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+						.modal-header#mc_embed_signup_scroll
+							button.close(type='button', data-dismiss='modal')
+								span(aria-hidden='true') ×
+								span.sr-only Close
+							h4#myModalLabel.modal-title Let's make it official
+						.modal-body
+							p
+								| Thank you for liking the blog! Occasionally I send out info about new blog posts, life hacks,
+								| and other tidbits that I'm working on. Subscribing allows me to keep in better contact with
+								| you, and make sure that you're getting the most out of the blog and life in general.
+								| Put your email below, and let's make the most of it together.
+							.mc-field-group
+								input#mce-EMAIL.required.email(type='email', value='', name='EMAIL', placeholder='Email address required')
+								span.asterisk *
+						#mce-responses.clear
+							#mce-error-response.response(style='display:none')
+							#mce-success-response.response(style='display:none')
+						.modal-footer
+							div(style='position: absolute; left: -5000px;')
+								input(type='text', name='b_584f8d8c2c7dcb55d63212970_bb4694ca0d', tabindex='-1', value='')
+							.clear
+								input#mc-embedded-subscribe.btn(type='submit', value='Subscribe', name='subscribe')
+					script(type='text/javascript', src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js')
+					script(type='text/javascript').
+						(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
+					// End mc_embed_signup
+
+		
+		//- hr
+		//- if user && user.canAccessKeystone
+		//- 	p
+		//- 		a(href='/keystone').btn.btn-lg.btn-primary Open the Admin UI
+		//- else
+		//- 	p We have created a default Admin user for you with the email <strong>j.p.zivalich@gmail.com</strong> and the password <strong>3rU9t!oNpaG3Sh</strong>.
+		//- 	p
+		//- 		a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
+		//- 		|  to use the Admin UI.

@@ -1,5 +1,9 @@
 extends ../layouts/default
 
+append config
+	- var pageSub = ''
+	- var bkgImg = '/images/bkg-img/blog.png'
+
 mixin post(post)
 	.post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
 		h2: a(href='/blog/post/' + post.slug)= post.title
