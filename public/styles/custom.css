@@ -85,5 +85,8 @@ h6 {
 }
 
 #read-button {
-	margin-right: 1em;
+	margin-right: .5em;
+}
+#sub-button {
+	margin-left: .5em;
 }
