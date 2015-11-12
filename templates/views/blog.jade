@@ -6,7 +6,7 @@ append config
 
 mixin post(post)
 	.post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
-		h2: a(href='/blog/post/' + post.slug)= post.title
+		h4: a(href='/blog/post/' + post.slug)= post.title
 		p.lead.text-muted Posted 
 			if post.publishedDate
 				| on #{post._.publishedDate.format('MMMM Do, YYYY')} 
@@ -38,7 +38,7 @@ block content
 			else
 				if data.posts.results.length
 					if data.posts.totalPages > 1
-						h4.text-weight-normal Showing 
+						h6.text-weight-normal Showing 
 							strong #{data.posts.first}
 							|  to 
 							strong #{data.posts.last}
@@ -46,7 +46,7 @@ block content
 							strong #{data.posts.total}
 							|  posts.
 					else
-						h4.text-weight-normal Showing #{utils.plural(data.posts.results.length, '* post')}.
+						h6.text-weight-normal Showing #{utils.plural(data.posts.results.length, '* post')}.
 					.blog
 						each post in data.posts.results
 							+post(post)
@@ -72,8 +72,8 @@ block content
 		
 		if data.categories.length
 			.col-sm-4.col-md-3
-				h2 Categories
+				h2 Topics
 				.list-group(style='margin-top: 70px;')
-					a(href='/blog', class=!data.category ? 'active' : false).list-group-item All Categories
+					a(href='/blog', class=!data.category ? 'active' : false).list-group-item All Topics
 					each cat in data.categories
 						a(href='/blog/' + cat.key, class=data.category && data.category.id == cat.id ? 'active' : false).list-group-item= cat.name
