@@ -90,3 +90,7 @@ h6 {
 #sub-button {
 	margin-left: .5em;
 }
+#read-button, #sub-button {
+	font-size: 100%;
+	width: 30%;
+}
