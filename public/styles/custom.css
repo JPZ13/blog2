@@ -89,6 +89,10 @@ h6 {
   .intro-header .page-heading {
     padding: 150px 0;
   }
+	#read-button, #sub-button {
+		font-size: 20px;
+		padding: 25px 35px;
+	}
 }
 
 #read-button {
@@ -96,8 +100,4 @@ h6 {
 }
 #sub-button {
 	margin-left: .5em;
-}
-#read-button, #sub-button {
-	font-size: 20px;
-
 }
