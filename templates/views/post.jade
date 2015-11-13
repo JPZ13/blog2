@@ -31,8 +31,8 @@ block content
 						.image-wrap: img(src=data.post._.image.fit(750,450)).img-responsive
 					!= data.post.content.full
 		hr
-		h3.text-center Like What You Read? Subscribe!
-		p
+		h3.text-center Like What You See? Subscribe!
+		p.text-center
 			| Get notified whenever there's a new post along with other useful
 			| information sent directly to your inbox. Dope stuff. No spam.
 			#mc_embed_signup
@@ -43,9 +43,8 @@ block content
 				#mce-error-response.response(style='display:none')
 				#mce-success-response.response(style='display:none')
 				div(style='position: absolute; left: -5000px;')
-					input(type='text', name='b_584f8d8c2c7dcb55d63212970_bb4694ca0d', tabindex='-1', value='')
-				.clear
-					input#mc-embedded-subscribe.btn.btn-default(type='submit', value='Subscribe', name='subscribe')
+					input.text-left(type='text', name='b_584f8d8c2c7dcb55d63212970_bb4694ca0d', tabindex='-1', value='')
+					input#mc-embedded-subscribe.btn.btn-default.text-right(type='submit', value='Subscribe', name='subscribe')
 		script(type='text/javascript', src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js')
 		script(type='text/javascript').
 			(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
