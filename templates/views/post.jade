@@ -44,6 +44,7 @@ block content
 						if data.post.author
 							| by #{data.post.author.name.first}
 				.post
+					.fb-like(data-share="true", data-width="450", data-show-faces="true")
 					if data.post.image.exists
 						.image-wrap: img(src=data.post._.image.fit(750,450)).img-responsive
 					!= data.post.content.full
