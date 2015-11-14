@@ -4,6 +4,23 @@ append config
 	- var pageSub = ''
 
 block content
+	//- Load Facebook SDK
+	script.
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '1524485887871920',
+				xfbml      : true,
+				version    : 'v2.5'
+			});
+		};
+		(function(d, s, id){
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+
 	.container: .row: .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
 		article
 			p: a(href='/blog') &larr; back to the blog
@@ -30,6 +47,9 @@ block content
 					if data.post.image.exists
 						.image-wrap: img(src=data.post._.image.fit(750,450)).img-responsive
 					!= data.post.content.full
+			//facebook share button
+			.btn.btn-facebook(data-href='{document.URL}'):.fa.fa-facebook.fa-2 Share on Facebook
+		//- Subscribe box
 		hr
 		h3.text-center Like What You See? Subscribe!
 		p.text-center
