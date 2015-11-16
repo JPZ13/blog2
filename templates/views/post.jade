@@ -29,7 +29,7 @@ block content
 				h2 Invalid Post.
 			else
 				header
-					h2= data.post.title
+					h2#post-title= data.post.title
 					h6#post-sub Posted 
 						if data.post.publishedDate
 							| on #{data.post._.publishedDate.format('MMMM Do, YYYY')} 
@@ -52,6 +52,24 @@ block content
 			#fb-root
 			a.btn.btn-facebook(href='#', onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog','width=626,height=436');return false;") 
 				i.fa.fa-facebook.fa-2 &nbsp; Share on Facebook
+			//- Twitter Share button
+			.btn.btn-twitter
+			script.
+				$(document).ready(function(){
+					event.preventDefault();
+					
+					// Get current URL
+					var pathname = window.location;
+					
+					// Get post title
+					var postTitle = $('#post-id').text();
+					
+					// Create Twitter URL
+					var tweeturl = 'https://twitter.com/share?url='+encodeURI(pathname)+'&via=JPZisMe&text='+encodeURI(postTitle);
+					
+					// Place the text on the page.
+					$('div.btn.btn-twitter').append('<a id="twitterbutton" href=" '+tweeturl+' ">Tweet</a>');
+					});
 		//- Subscribe box
 		hr
 		h3.text-center Like What You See? Subscribe!
