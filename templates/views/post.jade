@@ -29,7 +29,7 @@ block content
 				h2 Invalid Post.
 			else
 				header
-					h2#post-title= data.post.title
+					h2#post-id= data.post.title
 					h6#post-sub Posted 
 						if data.post.publishedDate
 							| on #{data.post._.publishedDate.format('MMMM Do, YYYY')} 
