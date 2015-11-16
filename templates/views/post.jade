@@ -81,15 +81,9 @@ block content
 			// Begin MailChimp Signup Form
 	#mc_embed_signup
 		form#mc-embedded-subscribe-form.validate(action='//conquistar.us12.list-manage.com/subscribe/post?u=584f8d8c2c7dcb55d63212970&id=bb4694ca0d', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
-			#mc_embed_signup_scroll
-				.indicates-required
-					span.asterisk *
-						|  indicates required
+			#mc_embed_signup_scroll.text-center
 				.mc-field-group
-					label(for='mce-EMAIL')
-						| Email Address  
-						span.asterisk *
-					input#mce-EMAIL.required.email(type='email', value='', name='EMAIL')
+					input#mce-EMAIL.required.email(type='email', value='', name='EMAIL', placeholder='Email Address Required')
 				#mce-responses.clear
 					#mce-error-response.response(style='display:none')
 					#mce-success-response.response(style='display:none')
