@@ -120,3 +120,21 @@ h6 {
 .btn-facebook:focus {
 	color: #fff;
 }
+
+.btn-twitter {
+	color: #fff;
+	background-color: #55acee;
+}
+.btn-twitter:hover {
+	color: #fff;
+	background-color: #399eeb;
+}
+.btn-twitter:focus {
+	color: #fff;
+}
+#fb-post-btn {
+	margin-right: .25em;
+}
+#twtr-post-btn {
+	margin-left: .25em;
+}

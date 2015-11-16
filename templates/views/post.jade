@@ -49,27 +49,29 @@ block content
 						.image-wrap: img(src=data.post._.image.fit(750,450)).img-responsive
 					!= data.post.content.full
 			//facebook share button
-			#fb-root
-			a.btn.btn-facebook(href='#', onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog','width=626,height=436');return false;") 
-				i.fa.fa-facebook.fa-2 &nbsp; Share on Facebook
-			//- Twitter Share button
-			.btn.btn-twitter
-			script.
-				$(document).ready(function(){
-					event.preventDefault();
-					
-					// Get current URL
-					var pathname = window.location;
-					
-					// Get post title
-					var postTitle = $('#post-id').text();
-					
-					// Create Twitter URL
-					var tweeturl = 'https://twitter.com/share?url='+encodeURI(pathname)+'&via=JPZisMe&text='+encodeURI(postTitle);
-					
-					// Place the text on the page.
-					$('div.btn.btn-twitter').append('<a id="twitterbutton" href=" '+tweeturl+' ">Tweet</a>');
-					});
+			.text-center
+				#fb-root
+				a.btn.btn-facebook#fb-post-btn(href='#', onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),'facebook-share-dialog','width=626,height=436');return false;") 
+					i.fa.fa-facebook.fa-2 &nbsp; Share on Facebook
+				//- Twitter Share button
+				a.btn.btn-twitter#twtr-post-btn(href='#')
+					i.fa.fa-twitter.fa-2 &nbsp; Share on Twitter
+				script.
+					$(document).ready(function(){
+						event.preventDefault();
+						
+						// Get current URL
+						var pathname = window.location;
+						
+						// Get post title
+						var postTitle = $('#post-id').text();
+						
+						// Create Twitter URL
+						var tweeturl = 'https://twitter.com/share?url='+encodeURI(pathname)+'&via=JPZisMe&text='+encodeURI(postTitle);
+						
+						// Edit link
+						$('a.btn.btn-twitter').attr("href", tweeturl)
+						});
 		//- Subscribe box
 		hr
 		h3.text-center Like What You See? Subscribe!
