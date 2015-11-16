@@ -85,8 +85,10 @@ block content
 			#mce-responses.clear
 				#mce-error-response.response(style='display:none')
 				#mce-success-response.response(style='display:none')
-					input.text-left(type='text', name='b_584f8d8c2c7dcb55d63212970_bb4694ca0d', tabindex='-1', value='')
-					input#mc-embedded-subscribe.btn.btn-default(type='submit', value='Subscribe', name='subscribe')
+			div(style='position: absolute; left: -5000px;')
+				input.text-left(type='text', name='b_584f8d8c2c7dcb55d63212970_bb4694ca0d', tabindex='-1', value='')
+			.clear
+				input#mc-embedded-subscribe.btn.btn-default(type='submit', value='Subscribe', name='subscribe')
 		script(type='text/javascript', src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js')
 		script(type='text/javascript').
 			(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
