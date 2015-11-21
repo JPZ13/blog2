@@ -36,7 +36,7 @@
 
 @font-face {
     font-family: 'Cabana'; /*a name to be used later*/
-    src: url('/fonts/cabana.regular.otf') format('otf'); /*URL to font*/
+    src: url('/public/fonts/cabana.regular.otf') format('otf'); /*URL to font*/
 }
 
 h1,
