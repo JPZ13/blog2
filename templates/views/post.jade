@@ -2,6 +2,10 @@ extends ../layouts/default
 
 append config
 	- var pageSub = ''
+	
+append head
+	meta(property="og:title" content=data.post.title)
+	meta(property="og:url" content="{document.URL}")
 
 block content
 	//- Load Facebook SDK
